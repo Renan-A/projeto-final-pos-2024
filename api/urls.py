@@ -26,4 +26,6 @@ router.register('comments', CommentViewSet)
 router.register('albums', AlbumViewSet)
 router.register('photos', PhotoViewSet)
 
-urlpatterns = router.urls
+urlpatterns = [
+    path('api/', include(router.urls)),
+]
